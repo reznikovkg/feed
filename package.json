@@ -1,6 +1,6 @@
 {
   "name": "feed-js-extended",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Feed is a RSS, Atom and JSON feed generator for Node.js, making content syndication simple and intuitive!",
   "homepage": "https://github.com/reznikovkg/feed",
   "author": "Jean-Philippe Monette <contact@jpmonette.net>",

@@ -19,9 +19,7 @@ export default (ins: Feed) => {
         title: { _text: options.title },
         link: { _text: options.link },
         description: { _text: options.description },
-        lastBuildDate: { _text: options.updated ? options.updated.toUTCString() : new Date().toUTCString() },
-        docs: { _text: options.docs ? options.docs : "https://validator.w3.org/feed/docs/rss2.html" },
-        generator: { _text: options.generator || generator },
+        lastBuildDate: { _text: options.updated ? options.updated.toUTCString() : new Date().toUTCString() }
       },
     },
   };
@@ -118,7 +116,7 @@ export default (ins: Feed) => {
     let item: any = {};
 
     if (entry.title) {
-      item.title = { _cdata: entry.title };
+      item.title = { _text: entry.title };
     }
 
     if (entry.link) {
@@ -138,11 +136,11 @@ export default (ins: Feed) => {
     }
 
     if (entry.authorName) {
-      item['dc:creator'] = { _text: entry.authorName };
+      item['dc:creator'] = { _text: entry.authorName, _attributes: {"xmlns:dc":"http://purl.org/dc/elements/1.1/"} };
     }
 
     if (entry.description) {
-      item.description = { _cdata: entry.description };
+      item.description = { _text: entry.description };
     }
 
     if (entry.content) {
