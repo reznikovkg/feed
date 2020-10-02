@@ -1,6 +1,6 @@
 {
-  "name": "feed",
-  "version": "4.2.0",
+  "name": "feed-js-extended",
+  "version": "1.0.0",
   "description": "Feed is a RSS, Atom and JSON feed generator for Node.js, making content syndication simple and intuitive!",
   "homepage": "https://github.com/reznikovkg/feed",
   "author": "Jean-Philippe Monette <contact@jpmonette.net>",
@@ -45,5 +45,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/reznikovkg/feed.git"
-  }
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }
