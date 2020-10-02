@@ -137,6 +137,10 @@ export default (ins: Feed) => {
       item.pubDate = { _text: entry.date.toUTCString() };
     }
 
+    if (entry.authorName) {
+      item['dc:creator'] = { _text: entry.authorName };
+    }
+
     if (entry.description) {
       item.description = { _cdata: entry.description };
     }
